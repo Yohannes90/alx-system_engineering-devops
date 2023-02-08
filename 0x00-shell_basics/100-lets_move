@@ -1,2 +1,2 @@
 #!/bin/bash
-rm -r /tmp/u/[:upper:]*
+rm /tmp/u/[:upper:]*
