@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# This script is displaying "Best School" 10 times, but "Hy" on ninth
+# This script is displaying "Best School" 10 times, but "badluck" on 4th and "goodluck" on 8th
 
 i=1
 while [ $i -lt 11 ];
