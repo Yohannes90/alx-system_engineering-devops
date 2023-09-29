@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # This script is displaying "Best School" 10 times, but "Hy" on ninth
 
-i=0
+i=1
 until [ $i -eq 10 ];
 do
     if [ $i -eq 9 ]
