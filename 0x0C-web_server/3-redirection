@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # automatically configure a Ubuntu machine to respect above requirements
 
-apt-get -y update
+apt-get update
 apt-get -y install nginx
 ufw allow 'Nginx HTTP'
 
