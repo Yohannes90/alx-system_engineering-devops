@@ -3,6 +3,7 @@
 
 apt-get -y update
 apt-get -y install nginx
+ufw allow 'Nginx HTTP'
 
 mkdir /etc/nginx/html
 touch /etc/nginx/html/index.html
