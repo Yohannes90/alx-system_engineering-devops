@@ -3,15 +3,11 @@
 #   The name of the custom HTTP header must be X-Served-By
 #   The value of the custom HTTP header must be the hostname of the server Nginx is running on
 
-var=$(hostname)
-new_string="error_page 404 \/custom_404.html;\n location \/redirect_me {\n return 301 \$scheme:\/\/www.google.com;"
-new_string2="server {\n\tadd_header X-Served-By $var;"
-
-apt-get update -y
-apt-get install nginx -y
-echo "Hello World!" > /usr/share/nginx/html/index.html
+sudo apt-get -y update
+sudo apt-get -y install nginx
+sudo service nginx start
+sudo sed -i "11i\\\tadd_header X-Served-By $HOSTNAME;" /etc/nginx/nginx.conf
+echo "Hello World!" | sudo tee /usr/share/nginx/html/index.html
 mkdir -p /var/www/html
 echo "Ceci n'est pas une page" > /var/www/html/custom_404.html
-sudo sed -i -E "s/^[^#]+location \/ \{/$new_string/" /etc/nginx/sites-available/default
-sudo sed -i -E "s/^server \{/$new_string2/" /etc/nginx/sites-available/default
-sudo service nginx start
+sudo service nginx restart
