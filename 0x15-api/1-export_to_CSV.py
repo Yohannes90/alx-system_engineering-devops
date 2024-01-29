@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ Using the task #0, extend to export data in the CSV format
 """
+
 import csv
 import requests
 import sys

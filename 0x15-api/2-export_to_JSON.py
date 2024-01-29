@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ Using the task #0, extend to export data in the JSON format
 """
+
 import json
 import requests
 import sys
